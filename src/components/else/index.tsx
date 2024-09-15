@@ -1,7 +1,5 @@
-import { PropsWithChildren } from "react";
+import { WithChildren } from "@/utils/type";
 
-export type ElseProps = PropsWithChildren;
-
-export default function Else({ children }: ElseProps) {
-  return children;
+export default function Else({ children }: WithChildren) {
+  return <>{children}</>;
 }

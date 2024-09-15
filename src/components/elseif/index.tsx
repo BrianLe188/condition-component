@@ -1,7 +1,5 @@
-import { PropsWithChildren } from "react";
+import { ConditionWithChildren } from "@/utils/type";
 
-export type ElseIfProps = { condition: boolean } & PropsWithChildren;
-
-export default function ElseIf({ condition, children }: ElseIfProps) {
-  return condition ? children : null;
+export default function ElseIf({ condition, children }: ConditionWithChildren) {
+  return condition ? <>{children}</> : null;
 }

@@ -1,11 +1,13 @@
-import { Children, isValidElement, PropsWithChildren } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Children, isValidElement } from "react";
 import Case from "../case";
+import { WithChildren } from "@/utils/type";
 
 export type SwitchProps = {
-  targetValue: unknown;
-} & PropsWithChildren;
+  value: unknown;
+} & WithChildren;
 
-export default function Switch({ targetValue, children }: SwitchProps) {
+export default function Switch({ value, children }: SwitchProps): any {
   const cases = Children.toArray(children).reduce((prev, child) => {
     if (
       isValidElement(child) &&
@@ -20,5 +22,5 @@ export default function Switch({ targetValue, children }: SwitchProps) {
     return prev;
   }, {});
 
-  return cases?.[targetValue as keyof typeof cases] || null;
+  return <>{cases?.[value as keyof typeof cases] || null}</>;
 }

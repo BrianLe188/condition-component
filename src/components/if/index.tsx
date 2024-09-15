@@ -1,7 +1,5 @@
-import { PropsWithChildren } from "react";
+import { ConditionWithChildren } from "@/utils/type";
 
-export type IfProps = { condition: boolean } & PropsWithChildren;
-
-export default function If({ condition, children }: IfProps) {
-  return condition ? children : null;
+export default function If({ condition, children }: ConditionWithChildren) {
+  return condition ? <>{children}</> : null;
 }

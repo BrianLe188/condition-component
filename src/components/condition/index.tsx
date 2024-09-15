@@ -1,10 +1,10 @@
-import { Children, isValidElement, PropsWithChildren } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Children, isValidElement } from "react";
 import If from "../if";
 import Else from "../else";
+import { WithChildren } from "@/utils/type";
 
-export type ConditionProps = {} & PropsWithChildren;
-
-export default function Condition({ children }: ConditionProps) {
+export default function Condition({ children }: WithChildren): any {
   const getChildrenInfo = () => {
     return Children.toArray(children).find((child, index) => {
       if (isValidElement(child) && typeof child.type !== "string") {
@@ -30,5 +30,5 @@ export default function Condition({ children }: ConditionProps) {
     });
   };
 
-  return getChildrenInfo();
+  return <>{getChildrenInfo()}</>;
 }
