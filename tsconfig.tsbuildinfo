@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/vite-env.d.ts","./src/components/case/index.tsx","./src/components/condition/index.tsx","./src/components/else/index.tsx","./src/components/elseif/index.tsx","./src/components/if/index.tsx","./src/components/switch/index.tsx"],"version":"5.6.2"}
