@@ -3,6 +3,9 @@
   "author": "Viet Anh <anhkun123456@gmail.com> (https://portfolio-vietanhle.vercel.app/)",
   "description": "A React-based package that provides components to replace traditional `if-else` and `switch-case` statements, making conditional rendering easier and cleaner in your React applications.",
   "keywords": [
+    "replace traditional conditional logic",
+    "reactjs condition",
+    "js/ts condition",
     "condition",
     "if",
     "else",
@@ -12,7 +15,7 @@
   ],
   "private": false,
   "license": "MIT",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -33,7 +36,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview"
   },
