@@ -11,11 +11,12 @@
     "else",
     "elseif",
     "switch",
-    "case"
+    "case",
+    "default"
   ],
   "private": false,
   "license": "MIT",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",

@@ -36,5 +36,7 @@ export default function Switch({ value, children }: SwitchProps): any {
     {} as Record<string, any>,
   );
 
-  return <>{cases?.[value as keyof typeof cases] || null}</>;
+  return (
+    <>{cases?.[value as keyof typeof cases] || cases?.[Default.name] || null}</>
+  );
 }
