@@ -1,7 +1,7 @@
 {
   "name": "condition-component",
   "author": "Viet Anh <anhkun123456@gmail.com> (https://portfolio-vietanhle.vercel.app/)",
-  "description": "A React-based package that provides components to replace traditional `if-else` and `switch-case` statements, making conditional rendering easier and cleaner in your React applications.",
+  "description": "A React-based package that provides components to replace traditional `if-else` and `switch-case` statements also array method `filter` and `map`, making conditional rendering easier and cleaner in your React applications.",
   "keywords": [
     "replace traditional conditional logic",
     "reactjs condition",
@@ -12,11 +12,14 @@
     "elseif",
     "switch",
     "case",
-    "default"
+    "default",
+    "filter",
+    "map",
+    "method chaining"
   ],
   "private": false,
   "license": "MIT",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -39,7 +42,8 @@
     "dev": "vite",
     "build": "tsc && vite build --mode production",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -47,18 +51,23 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.1",
     "@types/node": "^22.5.5",
-    "@types/react": "^18.3.3",
+    "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "global-jsdom": "^25.0.0",
     "globals": "^15.9.0",
+    "jsdom": "^25.0.0",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1",
-    "vite-plugin-dts": "^4.2.1"
+    "vite-plugin-dts": "^4.2.1",
+    "vitest": "^2.1.1"
   }
 }

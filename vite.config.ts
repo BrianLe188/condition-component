@@ -11,7 +11,13 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: (id) => {
+        if (["react", "react-dom"].includes(id)) return true;
+
+        if (/\.test\.(t|j)sx?$/.test(id)) return true;
+
+        return false;
+      },
       output: {
         globals: {
           react: "React",

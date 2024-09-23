@@ -25,6 +25,7 @@ yarn add condition-component
 
 - **Replace `if-else`**: Use React components to handle conditions in JSX instead of writing logic blocks in JavaScript.
 - **Replace `switch-case`**: Simplify complex conditional rendering by avoiding `switch-case` statements.
+- **Replace `array methods`**: Make `map`, `filter` (and more in the future) more readable avoiding javascript code inside render statements.
 - **Readable and Reusable**: Enhance code readability and reusability through a component-driven approach.
 - **Modular and Clean**: Keep your conditional logic modular and easy to maintain.
 
@@ -94,7 +95,7 @@ import { Condition, If, ElseIf, Else } from "condition-component";
 ### Example 3: Replacing `switch-case`
 
 ```jsx
-import { Switch, Case, Default } from "<your-package>";
+import { Switch, Case, Default } from "condition-component";
 
 <Switch value={value}>
   <Case value="option1">
@@ -107,6 +108,25 @@ import { Switch, Case, Default } from "<your-package>";
     <DefaultComponent />
   </Default>
 </Switch>;
+```
+
+### Example 4: Replacing `map` and `filter`
+
+```jsx
+import { Chain, Map, Filter } from "condition-component";
+
+<Chain data={your_array_data}>
+  <Filter>{(item) => condition}</Filter>
+  <Map>{(item) => <p>{item}</p>}</Map>
+</Chain>;
+```
+
+And also, you can use Map alone:
+
+```jsx
+import { Map } from "condition-component";
+
+<Map>{(item) => <p>{item}</p>}</Map>;
 ```
 
 ## Contributing
